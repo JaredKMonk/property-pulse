@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import Navbar from "@/components/Navbar";
 
 import "@/assets/styles/globals.css";
 
@@ -16,6 +17,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <html lang="en">
       <body>
+        <Navbar />
         <div>{children}</div>
       </body>
     </html>
