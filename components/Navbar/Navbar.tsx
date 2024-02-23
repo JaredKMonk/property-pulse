@@ -7,6 +7,7 @@ import logo from "@/assets/images/logo-white.png";
 import profileDefault from "@/assets/images/profile.png";
 import { FaGoogle } from "react-icons/fa";
 import NavbarButton from "./NavbarButton";
+import NavbarButtonMobile from "./NavbarButtonMobile";
 
 type Props = {};
 
@@ -175,24 +176,13 @@ const Navbar = (props: Props) => {
       {isMobileMenuOpen && (
         <div id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
-            <Link
-              href="/"
-              className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              href="/properties"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+            <NavbarButtonMobile href="/">Home</NavbarButtonMobile>
+            <NavbarButtonMobile href="/properties">
               Properties
-            </Link>
-            <Link
-              href="/properties/add"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+            </NavbarButtonMobile>
+            <NavbarButtonMobile href="/properties/add">
               Add Property
-            </Link>
+            </NavbarButtonMobile>
             <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
               <FaGoogle className="text-white mr-2" />
               <span>Login or Register</span>
