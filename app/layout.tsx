@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer";
 
 import "@/assets/styles/globals.css";
 
@@ -19,6 +20,7 @@ const MainLayout = ({ children }: Props) => {
       <body>
         <Navbar />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
